@@ -1,0 +1,12 @@
+CREATE DATABASE AKHIL9;
+use AKHIL9;
+create table regions(region_id int,region_name varchar(100),primary key(region_id));
+insert into regions(region_id,region_name) values(80,'trivandrum');
+create table countries(country_id int,country_name varchar(100),region_id int,FOREIGN KEY (region_id) REFERENCES regions(regionid));
+insert into regions(country_id,country_name,region_id) values(81,'triv',80);
+create table locations(location_id int,postal_code int,street_address varchar(40),city varchar(100),state_province varchar(100),country_id int,PRIMARY KEY (location_id),FOREIGN KEY (country_id) REFERENCES countries(country_id));
+insert into locations values(11,121,adddsdsd,fdfdfd,tre,sss,81);
+create table departments(department_id int,department_name varchar(10),location_id int,primary key(department_id),FOREIGN KEY (location_id) REFERENCES locations(location_id));
+create table jobs(job_id int,job_title varchar(100),min_salary int,max_salary int,PRIMARY KEY (job_id));
+create table employees(job_id int,employee_id int,first_name varchar(40),last_name varchar(100),email varchar(100),phone_number int,job_title varchar(100),min_salary int,max_salary int,manager_id int,department_id int,PRIMARY KEY (employee_id),FOREIGN KEY (job_id) REFERENCES jobs(job_id),FOREIGN KEY (department_id) REFERENCES departments(department_id),FOREIGN KEY (manager_id) REFERENCES employees(manager_id));
+create table dependents(dependent_id int,first_name varchar(100),last_name varchar(100),relationship varchar(100),employee_id int,primary key(dependent_id),foreign key(employee_id) references employees(employee_id));
