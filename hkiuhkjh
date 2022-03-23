@@ -1,0 +1,33 @@
+class perimeter
+{
+int length;
+int breadth;
+}
+perimeter()
+{
+length=0;
+breadth=0;
+}
+perimeter(int x,int y)
+{
+length=x;
+breadth=y;
+}
+void peri2()
+{
+int peri;
+peri=2*(length*breadth);
+system.out.println("\n the perimeter of the rectangle is:"+peri);
+}
+}
+ 
+class area
+{
+public static void main(string args[])
+{
+perimeter p1=new perimeter();
+perimeter p2=new perimeter();
+p1.peri2();
+p2.peri2();
+}
+}
