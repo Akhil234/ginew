@@ -1,0 +1,16 @@
+
+create database ak;
+use ak;
+create table prod(p_id int,p_name varchar(30),price int,quantity int);
+call srt(2,"carrot",0,0);
+select * from prod;
+
+
+procedure 
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `srt`(IN x int,IN y varchar(20),IN z int,IN h int)
+BEGIN
+if(z>0 AND h>=0) then
+insert into prod values(x,y,z,h);
+end if;
+END
