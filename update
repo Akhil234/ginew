@@ -1,0 +1,7 @@
+import pymongo
+host = pymongo.MongoClient("mongodb://localhost:27017")
+db=host["sample"];
+coll=db["student"];
+condition=({"mark":80})
+_update=({"$set":{"mark":"90"}})
+coll.update_many(condition,_update)
