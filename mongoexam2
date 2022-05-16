@@ -1,0 +1,10 @@
+import pymongo
+client=pymongo.MongoClient("mongodb://localhost:27017")
+db=client["exam"]
+coll=db["student"]
+#x = coll.find({"Vaccination_status":"not vaccinated"},{"_id":0})
+#for i in x:
+ # print(i["Place"],"\n",i["Phone"])
+x=coll.find({"Department":"MCA"}).sort("Lab_mark.External",-1).limit(2)
+for i in x:
+    print(i["Name"],i["Phone"])
