@@ -1,0 +1,6 @@
+Sometimes, we want to check how large or small a given file is. The total number of lines of a given file helps us to know how big that file is. Linux, like any other operating system, provides us with several ways of achieving the task.
+
+In this tutorial, we’ll look at the most common ways of counting the number of lines of a specified file using Bash.
+m;wm
+ xkax
+jussa
