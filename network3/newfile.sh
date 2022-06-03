@@ -1,0 +1,6 @@
+echo "filename: $0"
+echo "first parameter: $1"
+echo "second parameter: $2"
+echo "qouted value: $*"
+echo "quoted value: $@"
+echo "total no of parameter: $#"
