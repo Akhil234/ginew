@@ -1,0 +1,63 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF5722"
+            android:paddingLeft="120dp"
+            android:text="login"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="56sp"></TextView>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="566dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textPersonName|textCapWords"
+            android:text="type your name here"
+            android:textSize="79px"
+            android:background="#C3BABA"/>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="566dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="10dp"
+            android:text="password"
+            android:textSize="79px"
+            android:background="#C3BABA"/>
+
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="109dp"
+            android:text="ADD"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="266dp" />
+    </TableRow>
+</TableLayout>
